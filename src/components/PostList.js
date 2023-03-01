@@ -1,6 +1,7 @@
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import PostItem from "./PostItem";
 
-const PostList = ({posts, title, remove}) => {
+const PostList = ({posts, title, remove, page, totalPages}) => {
   if (!posts.length) {
     return (
       <div className="no-post">Посты не найдены</div>
@@ -9,10 +10,18 @@ const PostList = ({posts, title, remove}) => {
 
   return (
     <div className="posts">
-      <h1 className="posts__title">{title}</h1>
+      <div className="posts__title">{title}</div>
+      <div className="posts-page__num">Страница {page} из {totalPages}</div>
+      <TransitionGroup>
       {posts.map((post, index) => (
-        <PostItem remove={remove} number={index} post={post} key={post.id}/>
+        <CSSTransition key={post.id}
+                       timeout={500}
+                       classNames="post"
+        >
+          <PostItem remove={remove} number={index} post={post}/>
+        </CSSTransition>
       ))}
+      </TransitionGroup>
     </div>
   );
 };
