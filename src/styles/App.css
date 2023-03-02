@@ -12,10 +12,22 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 #root {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 5px;
 }
 
 .App {
@@ -24,18 +36,20 @@ body {
 }
 
 .posts-page {
-  width: 800px;
+  margin-top: 20px;
   margin-bottom: 50px;
 }
 
-.navbar {
-  height: 50px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15px;
+.header {
+  width: 100%;
+  padding: 15px 5px;
   background-color: #774E2A
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar__links {
@@ -81,6 +95,10 @@ body {
   align-items: center;
 }
 
+.post__content {
+  padding-right: 5px;
+}
+
 .post-enter {
   opacity: 0;
   transform: translateX(350px);
@@ -108,9 +126,21 @@ body {
   margin-bottom: 5px;
 }
 
-.body {
-  font-size: 18px;
+.post__btns {
+  display: flex;
+}
+
+.post__btns button {
+  margin: 0px 5px;
+}
+
+.post__body {
+  font-size: 16px;
   margin-bottom: 5px;
+}
+
+.post-page {
+  padding-top: 20px;
 }
 
 .no-post {
@@ -118,6 +148,60 @@ body {
   margin-top: 15px;
   font-size: 32px;
   font-weight: 600;
+}
+
+.comments {
+  margin-top: 50px;
+}
+
+.comments__title {
+  font-weight: 600;
+  font-size: 21px;
+}
+
+.comment-item {
+  margin: 15px auto;
+  padding: 20px;
+  border: 1px solid teal;
+  border-radius: 5px;
+}
+
+.comment-item__header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.comment-item__info {
+  margin-left: 15px;
+}
+
+.comment-item__avatar {
+  max-width: 70px;
+}
+
+.comment-item__avatar img {
+  border-radius: 50%;
+}
+
+.comment-item__name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.comment-item__email {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.comment-item__label {
+  color: grey;
+  font-weight: 400;
+}
+
+.comment-item__body {
+  font-size: 14px;
 }
 
 .create-btn {
@@ -176,4 +260,24 @@ body {
 .page404 {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.content-modes select {
+  margin-right: 5px;
+}
+
+.login-page {
+  margin-top: 20px;
+}
+
+.login__form {
+  max-width: 500px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.login__form button {
+  margin: 10px auto;
+  padding: 10px 5px;
+  width: 100%;
 }
