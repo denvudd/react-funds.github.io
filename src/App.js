@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { AuthContext } from "./context";
-
 import { BrowserRouter } from "react-router-dom";
 
+import { AuthContext } from "./context";
+
+import Footer from "./components/Footer/Footer";
 import AppRouter from "./components/AppRouter";
 
 import Navbar from "./components/UI/navbar/Navbar";
@@ -33,9 +34,10 @@ function App() {
         <header className="header">
           <Navbar/>
         </header>
-        <div className="container">
         <AppRouter/>
-        </div>
+        <footer className="footer">
+          <Footer/>
+        </footer>
       </BrowserRouter>
     </AuthContext.Provider>
   )  

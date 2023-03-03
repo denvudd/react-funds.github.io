@@ -1,0 +1,29 @@
+.login-page {
+  margin-top: 20px;
+  margin-bottom: 67vh;
+}
+
+.login__form {
+  max-width: 500px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.login__form button {
+  margin: 10px auto;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.failure-label {
+  color: red;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.hint {
+  position: absolute;
+  color: #fff;
+  left: 10px;
+  bottom: 10px;
+}

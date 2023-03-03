@@ -1,0 +1,21 @@
+.posts {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.posts__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.posts-page__num {
+  text-align: center;
+  font-size: 21px;
+  margin-top: 5px;
+}
+
+.observer {
+  height: 1px;
+  background: transparent;
+}

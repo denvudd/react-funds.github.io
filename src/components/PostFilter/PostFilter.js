@@ -1,4 +1,4 @@
-import MySelect from "./UI/select/MySelect";
+import MySelect from "../UI/select/MySelect";
 
 const PostFilter = ({filter, setFilter}) => {
   return (

@@ -1,5 +1,7 @@
 import { usePagination } from "../../../hooks/usePagination";
 
+import './pagination.css';
+
 const Pagination = ({totalPages, page, changePage}) => {
   const pagesArray = usePagination(totalPages);
   return (

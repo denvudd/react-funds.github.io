@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import MyButton from "./UI/button/MyButton";
+import MyButton from "../UI/button/MyButton";
 
+import './postItem.css';
 
 const PostItem = (props) => {
   const router = useNavigate();

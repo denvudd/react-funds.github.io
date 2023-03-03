@@ -1,0 +1,21 @@
+.posts-page {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.content-modes select {
+  margin-right: 5px;
+}
+
+.create-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.no-post {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 32px;
+  font-weight: 600;
+}

@@ -1,5 +1,7 @@
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import PostItem from "./PostItem";
+import PostItem from "../PostItem/PostItem";
+
+import './postList.css';
 
 const PostList = ({posts, title, remove, page, totalPages, limit, mode}) => {
   if (!posts.length) {

@@ -1,23 +1,24 @@
 import { useState, useEffect, useRef } from "react";
-import { usePosts } from "../hooks/usePost";
-import { useFetching } from "../hooks/useFetching";
+import { usePosts } from "../../hooks/usePost";
+import { useFetching } from "../../hooks/useFetching";
+import { useObserver } from "../../hooks/useObserver";
 
-import PostList from "../components/PostList";
-import PostForm from "../components/PostForm";
-import PostFilter from "../components/PostFilter";
-import PostSearch from "../components/PostSearch";
+import PostList from "../../components/PostList/PostList";
+import PostForm from "../../components/PostForm/PostForm";
+import PostFilter from "../../components/PostFilter/PostFilter";
+import PostSearch from "../../components/PostSearch/PostSearch";
 
-import MyModal from "../components/UI/modal/MyModal";
-import MyButton from "../components/UI/button/MyButton";
-import MySelect from "../components/UI/select/MySelect";
-import Loader from "../components/UI/loader/Loader";
-import Pagination from "../components/UI/pagination/Pagination";
+import MyModal from "../../components/UI/modal/MyModal";
+import MyButton from "../../components/UI/button/MyButton";
+import MySelect from "../../components/UI/select/MySelect";
+import Loader from "../../components/UI/loader/Loader";
+import Pagination from "../../components/UI/pagination/Pagination";
 
-import PostService from "../API/PostService";
+import PostService from "../../API/PostService";
 
-import { getPageCount } from "../utils/pages";
-import { useObserver } from "../hooks/useObserver";
+import { getPageCount } from "../../utils/pagesCount";
 
+import './posts.css';
 
 function Posts() {
   const [posts, setPosts] = useState([]);
@@ -70,8 +71,6 @@ function Posts() {
     setPosts(posts.filter(p => p.id !== post.id));
   };
 
-  console.log(mode);
-
   return (
     <div className="posts-page">
       <div className="container">
@@ -120,12 +119,12 @@ function Posts() {
                 limit={limit}
                 mode={mode}
         />
-        <div ref={lastElement} style={{height: 20, background: 'red'}}></div>
+        <div ref={lastElement} class="observer"></div>
         {isPostsLoading && 
-           <div className='loader__wrapper'><Loader/></div>}  
-        <Pagination page={page} 
-                    changePage={changePage} 
-                    totalPages={totalPages} 
+          <div className='loader__wrapper'><Loader/></div>}  
+          <Pagination page={page} 
+                      changePage={changePage} 
+                      totalPages={totalPages} 
         />
       </div>
     </div>

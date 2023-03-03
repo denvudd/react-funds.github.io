@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useFetching } from "../hooks/useFetching";
+import { useFetching } from "../../hooks/useFetching";
 
-import Loader from "../components/UI/loader/Loader";
+import Loader from "../../components/UI/loader/Loader";
 
-import PostService from "../API/PostService";
+import PostService from "../../API/PostService";
+
+import './postPage.css';
 
 const PostPage = () => {
   const [post, setPost] = useState({});
@@ -37,7 +39,18 @@ const PostPage = () => {
         {isLoading 
             ? <Loader/>
             : <div className="post-page__body">
-                <div>{post.id}. {post.title}</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptate officia nulla, aliquid 
+                  accusamus odit, nostrum dolores beatae excepturi eos in. Ullam ducimus quae ipsa vel suscipit enim expedita 
+                  nisi voluptas fugiat, porro alias. Repellat ducimus in facilis, voluptatem ea perspiciatis, magni voluptate 
+                  rerum, nostrum ratione autem libero numquam accusantium error quidem harum. Dolorum nemo expedita eaque iusto 
+                  corrupti aspernatur fugiat! Similique non ullam laboriosam optio error nisi! Suscipit et facere eum laborum quisquam 
+                  dolorem error quod laboriosam reprehenderit veritatis velit saepe delectus culpa, id voluptatem necessitatibus in quos 
+                  ab consequuntur temporibus nam animi adipisci enim. Eum, mollitia minima. Eaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere maxime enim velit accusantium. Consequatur sapiente 
+                  fuga ipsam optio aperiam ipsa, exercitationem placeat! Odit ratione fugiat doloremque nostrum quo accusantium vitae earum 
+                  veniam, non molestiae. Qui quod architecto recusandae magni maxime, nihil, consequatur, praesentium omnis voluptates delectus 
+                  cum quis vitae non?</p>
+                <p>{post.id}. {post.title}</p>
               </div>
         }
         {isComLoading

@@ -1,4 +1,4 @@
-import MyInput from "./UI/input/MyInput";
+import MyInput from "../UI/input/MyInput";
 
 const PostSearch = ({filter, setFilter}) => {
   return (
